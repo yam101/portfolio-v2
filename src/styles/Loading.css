@@ -1,0 +1,15 @@
+/* LoadingSquares.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.loading-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.loading-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+}

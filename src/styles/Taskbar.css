@@ -1,0 +1,29 @@
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    align-items: center;
+    z-index: 100;
+    height: 40px;
+    width: 100%;
+    background-color: #eeedf4;
+    border-top: 3px solid black;
+
+    overflow: hidden;
+}
+
+.tabs button{
+    cursor: pointer;
+    font-family: "Pixel Operator", serif;
+    font-size: 1.35rem;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.clock {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+}

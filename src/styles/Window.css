@@ -1,0 +1,65 @@
+.desktop-window {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #333;
+    background-color: #dddddd;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.window-titlebar {
+    display: flex;
+    justify-content: space-between;
+    cursor: move; /* indicates draggable area */
+    user-select: none; /* no text selection on drag */
+    padding: 10px 0 0 10px;
+}
+
+.window-title{
+    font-weight: bold;
+}
+
+/* Horizontal Line under the title */
+.window-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    padding: 5px;
+}
+
+.window-bars hr {
+    margin: 0;
+    border: 2px inset grey;
+}
+  
+.window-controls{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.window-controls button{
+    margin-right: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.minimize{
+    background-color: #f9ca6c;
+}
+
+.close {
+    background-color: #f05757;
+}
+
+.window-content {
+    background-color: white;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 10px;
+    height: inherit;
+}

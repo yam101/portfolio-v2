@@ -1,0 +1,24 @@
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.desktop-icon:hover {
+    background-color: rgba(103, 123, 237, 0.182);
+}
+.desktop-icon img {
+    object-fit: contain;
+    width: 70px;
+}
+
+.desktop-icon p{
+    margin: 0;
+    background-color: #eeedf4;
+    border-radius: 5px;
+    padding: 4px;
+}
