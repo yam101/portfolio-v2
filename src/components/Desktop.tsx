@@ -4,10 +4,9 @@ import bunnyGif from "../assets/bunny.gif";
 import DesktopIcon from "./DesktopIcon";
 import Window from "./Window";
 import Taskbar from "./Taskbar";
-import Loading from "./Loading";
 import Overlay from "./Overlay";
 import { appData } from "../data/appData";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface WindowData {
   id: number;
