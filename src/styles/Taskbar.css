@@ -7,19 +7,64 @@
     z-index: 100;
     height: 40px;
     width: 100%;
-    background-color: #eeedf4;
+    background-color: #dddddd;
     border-top: 3px solid black;
-
-    overflow: hidden;
+    padding-left: 5px;
 }
 
 .tabs button{
-    cursor: pointer;
+    height: 100%;
     font-family: "Pixel Operator", serif;
     font-size: 1.35rem;
     margin-right: 5px;
     background-color: transparent;
 }
+
+.tabs button:hover{
+    background-color: #c2c2dd;
+}
+
+.tabs .active,
+.tabs button:active {
+    border-top: 3px inset #9e9ec1;
+    border-left: 3px inset #9e9ec1;
+    border-right: 3px inset white;
+    border-bottom: 3px inset white;
+}
+.tabs .minimized{
+    border-top: 3px outset white;
+    border-left: 3px outset white;
+    border-right: 3px outset #9e9ec1;
+    border-bottom: 3px outset #9e9ec1;
+}
+
+.start-menu{
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    left: 5px;
+    width: 120px;
+    background-color: #c2c2dd;
+    border: 3px solid black;
+    box-shadow: 2px 2px 0px black;
+}
+
+.start-menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+}
+
+.start-menu ul li {
+    padding: 6px;
+    cursor: url("/pointer.png") 0 0, pointer;
+}
+
+.start-menu ul li:hover {
+    background: #e9e8ef;
+}
+
 
 .clock {
     align-items: center;

@@ -6,6 +6,16 @@
     background-color: #dddddd;
     border-right-width: 4px;
     border-bottom-width: 4px;
+    animation: load-in 0.3s;
+}
+
+@keyframes load-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .window-titlebar {
@@ -20,13 +30,13 @@
     font-weight: bold;
 }
 
-/* Horizontal Line under the title */
 .window-bars {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
     padding: 5px;
+    margin: 0 10px;
 }
 
 .window-bars hr {
@@ -40,26 +50,194 @@
 }
 
 .window-controls button{
-    margin-right: 8px;
-    font-weight: bold;
-    cursor: pointer;
+    margin-right: 6px;
     padding: 0;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 .minimize{
-    background-color: #f9ca6c;
+    background-color: #ebcb71;
+    border: 4px groove #735c2b;
 }
 
 .close {
-    background-color: #f05757;
+    background-color: #e86a6a;
+    border: 4px groove #783737;
+
 }
 
 .window-content {
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
     background-color: white;
     border: 2px solid black;
     margin: 5px;
+}
+
+/* Folder styles */
+.folder-header{
+    display: flex;
+    align-items: center;
+    background-color: #454541;
+    border-top: 2px solid black;
+    padding: 3px 8px;
+}
+
+.folder-header p{
+    color: #aaaaaa;
+    margin: 0;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    overflow-y: auto;
     padding: 10px;
-    height: inherit;
+}
+
+.skill img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.skill p{
+    margin: 8px;
+}
+
+/* Text editor styles */    
+.text-editor {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* About window styles */
+.about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    height: 100%;
+}
+.about-container h1, h3, p{
+    margin: 0;
+}
+.about-container h1{
+    margin-top: 20px;
+}
+.about-container .info{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    background-color: #595983;
+    border-top: 3px outset #9e9ec1;
+    border-left: 3px outset #9e9ec1;
+    border-right: 3px outset #38385b;
+    border-bottom: 3px outset #38385b;
+}
+.about-container .links a{
+    margin: 3px;
+    padding: 5px;
+}
+
+.about-container .links a:hover{
+    background-color: #38385b;
+}
+.about-container .links a:active{
+    border-top: 3px inset #38385b;
+    border-left: 3px inset #38385b;
+    border-right: 3px inset #9e9ec1;
+    border-bottom: 3px inset #9e9ec1;
+}
+.computer-icon{
+    width: 80px;
+}
+
+/* Project window styles */
+.projects-container{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.projects-list{
+    border-right: 2px solid #454541;
+    width: 250px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    cursor: url("/pointer.png") 0 0, pointer;
+    padding: 5px;
+}
+.list-item img{
+    width: 20px;
+    margin-right: 8px;
+}
+.list-item:hover, .list-item.active{
+    background-color: #dddddd;
+}
+
+.projects-details{
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.projects-details .image{
+    display: flex;
+    justify-content: center;
+}
+.projects-details img{
+    width: 250px;
+    border-radius: 10px;
+}
+.projects-details h3{
+    margin-top: 20px;
+}
+.projects-details .subheading{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+}
+.projects-details .description,
+.projects-details .label{
+    color: #89898b;
+}
+
+.projects-details a{
+    padding: 3px;
+    margin-left: 5px;
 }

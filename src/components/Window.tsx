@@ -1,9 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import "../styles/Window.css";
+import Skills from "./Skills";
+import TextEditor from "./TextEditor";
+import About from "./About";
+import Projects from "./Projects";
 
 interface WindowProps {
   id: number;
   title: string;
+  type: string;
   x: number;
   y: number;
   width: number;
@@ -93,12 +98,7 @@ export default function Window(props: WindowProps) {
     };
   }, [isDragging, handleMouseMove, handleMouseUp]);
 
-  // If minimized, we either hide via display: none or skip rendering:
-  if (props.isMinimized) {
-    return null;
-  }
-
-  // 2. Focus the window when the entire window (not just title bar) is clicked
+  // Focus the window when the entire window (not just title bar) is clicked
   const handleWindowClick = () => {
     props.onFocus(props.id);
   };
@@ -107,6 +107,21 @@ export default function Window(props: WindowProps) {
   const handleMinimize = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation(); // Prevent click from propagating to the parent container
     props.onMinimize(props.id);
+  };
+
+  const renderContent = () => {
+    switch (props.type) {
+      case "skills-folder":
+        return <Skills />;
+      case "readme-file":
+        return <TextEditor />;
+      case "about":
+        return <About />;
+      case "projects-folder":
+        return <Projects />;
+      default:
+        return <div>No content available</div>;
+    }
   };
 
   return (
@@ -118,6 +133,7 @@ export default function Window(props: WindowProps) {
         width: props.width,
         height: props.height,
         zIndex: props.zIndex,
+        display: props.isMinimized ? "none" : "flex",
       }}
       onClick={handleWindowClick}
     >
@@ -129,16 +145,45 @@ export default function Window(props: WindowProps) {
         </div>
         <div className="window-controls">
           <button className="minimize" onClick={handleMinimize}>
-            _
+            <svg
+              width="26"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="2" y="8" width="8" height="2" fill="black" />
+            </svg>
           </button>
           <button className="close" onClick={() => props.onClose(props.id)}>
-            X
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="2"
+                y1="2"
+                x2="10"
+                y2="10"
+                stroke="black"
+                strokeWidth="2"
+              />
+              <line
+                x1="2"
+                y1="10"
+                x2="10"
+                y2="2"
+                stroke="black"
+                strokeWidth="2"
+              />
+            </svg>
           </button>
         </div>
       </div>
-      <div className="window-content">
-        <p>blah blah blah</p>
-      </div>
+      <div className="window-content">{renderContent()}</div>
     </div>
   );
 }

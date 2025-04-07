@@ -1,0 +1,45 @@
+/* Overall scrollbar */
+::-webkit-scrollbar {
+    width: 18px; /* Adjust width for vertical scrollbar */
+}
+
+/* Scrollbar track (background behind the thumb) */
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-left: 6px solid white; /* Creates a thin scrollbar track */
+    border-right: 6px solid white;
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #ebcb71; /* Yellow-brown color */
+    border: 2px solid #b88f7b;
+    position: relative;
+}
+
+
+/* Scrollbar arrows */
+::-webkit-scrollbar-button {
+    background-color: white;
+    border: 2px solid black;
+    height: 16px;
+    display: block;
+}
+
+/* Up arrow */
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="5,1 9,6 1,6" fill="black"/></svg>') center no-repeat;
+    background-size: contain;
+}
+
+/* Down arrow */
+::-webkit-scrollbar-button:vertical:end:increment {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="1,4 9,4 5,9" fill="black"/></svg>') center no-repeat;
+    background-size: contain;
+}
+
+/* Hide extra buttons Safari sometimes adds */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}

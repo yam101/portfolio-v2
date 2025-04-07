@@ -6,10 +6,13 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #38385b;
+  animation: fadeIn 1s;
 }
 
 .loading-text {
   font-family: 'Press Start 2P', monospace;
-  font-size: 20px;
+  font-size: 1.25rem;
+  color: white;
+  width: 200px;
 }

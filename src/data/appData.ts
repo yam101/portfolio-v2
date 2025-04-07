@@ -1,47 +1,36 @@
-import folderIcon from "../assets/folder-pink.png";
+import pinkFolderIcon from "../assets/folder-pink.png";
+import yellowFolderIcon from "../assets/folder-yellow.png";
+import computerIcon from "../assets/computer.png";
+import fileIcon from "../assets/file.png";
+
 
 export const appData = [
   {
-    title: "Folder 1",
-    type: "folder",
-    icon: folderIcon,
+    title: "About",
+    type: "about",
+    icon: computerIcon,
+    width: 350,
+    height: 500,
+  },
+  {
+    title: "Skills",
+    type: "skills-folder",
+    icon: pinkFolderIcon,
     width: 600,
     height: 400,
   },
   {
-    title: "Folder 2",
-    type: "folder",
-    icon: folderIcon,
-    width: 400,
-    height: 300,
+    title: "Projects",
+    type: "projects-folder",
+    icon: yellowFolderIcon,
+    width: 700,
+    height: 500,
   },
   {
-    title: "Folder 3",
-    type: "folder",
-    icon: folderIcon,
+    title: "readme.txt",
+    type: "readme-file",
+    icon: fileIcon,
     width: 400,
-    height: 300,
+    height: 400,
   },
-  // {
-  //   title: 'Cool App',
-  //   type: 'app',
-  //   icon: 'app-icon.png',
-  //   width: 500,
-  //   height: 350,
-  // },
-  // {
-  //   title: 'Document',
-  //   type: 'file',
-  //   icon: 'file-icon.png',
-  //   width: 600,
-  //   height: 400,
-  // },
-  // {
-  //   title: 'New App',
-  //   type: 'app',
-  //   icon: 'new-app-icon.png',
-  //   width: 700,
-  //   height: 500,
-  // },
-  // Add more apps here
 ];
