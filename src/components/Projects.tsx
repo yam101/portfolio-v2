@@ -61,7 +61,7 @@ export default function Project() {
 
               <div>
                 {selectedProject.links?.map((link, index) => (
-                  <a href={link.url} key={index}>
+                  <a href={link.url} key={index} target="_blank">
                     {link.name}
                   </a>
                 ))}

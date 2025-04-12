@@ -56,7 +56,7 @@ export default function Desktop() {
   const [systemMode, setSystemMode] = useState<SystemMode>("normal");
 
   // When icon is double-clicked => open or focus a window
-  const handleIconDoubleClick = (title: string) => {
+  const handleIconClick = (title: string) => {
     // Check if a window with that title is already open
     const exists = windows.find((w) => w.title === title);
 
@@ -143,7 +143,7 @@ export default function Desktop() {
     return (
       <div className="sleep-screen" onClick={handleWake}>
         <img src={bunnyGif} />
-        <p className="tooltip">(click to wake)</p>
+        <p>(click to wake)</p>
       </div>
     );
   }
@@ -154,7 +154,11 @@ export default function Desktop() {
   }
 
   if (systemMode === "shutdown") {
-    return <div className="shutdown-screen"></div>;
+    return (
+      <div className="shutdown-screen">
+        <p>you may close this window now</p>
+      </div>
+    );
   }
 
   return (
@@ -168,7 +172,7 @@ export default function Desktop() {
             type={app.type}
             label={app.title}
             icon={app.icon}
-            onDoubleClick={() => handleIconDoubleClick(app.title)}
+            onClick={() => handleIconClick(app.title)}
           />
         ))}
 

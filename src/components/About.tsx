@@ -17,9 +17,18 @@ export default function About() {
         <p>University of Waterloo</p>
         <h3>Connect</h3>
         <div className="links">
-          <a href="https://github.com/yam101">Github</a>
-          <a href="https://www.linkedin.com/in/yasminmotahhary/">Linkedin</a>
-          <a href="mailto:ymotahhary@uwaterloo.ca">Email</a>
+          <a href="https://github.com/yam101" target="_blank">
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yasminmotahhary/"
+            target="_blank"
+          >
+            Linkedin
+          </a>
+          <a href="mailto:ymotahhary@uwaterloo.ca" target="_blank">
+            Email
+          </a>
         </div>
       </div>
     </div>
