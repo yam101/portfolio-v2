@@ -2,6 +2,7 @@ import pinkFolderIcon from "../assets/folder-pink.png";
 import yellowFolderIcon from "../assets/folder-yellow.png";
 import computerIcon from "../assets/computer.png";
 import fileIcon from "../assets/file.png";
+import chromeIcon from "../assets/chrome.png";
 
 
 export const appData = [
@@ -27,10 +28,18 @@ export const appData = [
     height: 500,
   },
   {
+    title: "Chrome",
+    type: "dino-game",
+    icon: chromeIcon,
+    width: 750,
+    height: 500,
+  },
+  {
     title: "readme.txt",
     type: "readme-file",
     icon: fileIcon,
     width: 400,
     height: 400,
   },
+
 ];

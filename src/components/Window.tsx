@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import TextEditor from "./TextEditor";
 import About from "./About";
 import Projects from "./Projects";
+import DinoGame from "./DinoGame";
 
 interface WindowProps {
   id: number;
@@ -119,6 +120,8 @@ export default function Window(props: WindowProps) {
         return <About />;
       case "projects-folder":
         return <Projects />;
+      case "dino-game":
+        return <DinoGame />;
       default:
         return <div>No content available</div>;
     }

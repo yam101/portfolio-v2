@@ -46,7 +46,7 @@ export default function Taskbar(props: TaskbarProps) {
     return () => clearInterval(timer);
   }, []);
 
-  console.log(props.windows);
+  //console.log(props.windows);
   return (
     <div className="taskbar">
       {startMenuOpen && (
